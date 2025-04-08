@@ -2,6 +2,7 @@ from create_table import create_table
 from insert_user import insert_user
 from list_users import list_users, list_specific_user
 from update_user import update_password
+from delete_user import delete_user
 
 from dotenv import load_dotenv
 
@@ -18,6 +19,7 @@ def menu():
         print("2. Ver usuarios")
         print("3. Ver un usuario específico")
         print("4. Cambiar contraseña")
+        print("5. Eliminar usuario")
         print("6. Salir")
 
         choice = int(input("Elige una opción"))
@@ -47,6 +49,12 @@ def menu():
             id = int(input("Por favor indica un ID"))
 
             update_password(id)
+
+        elif choice == 5:
+
+            id = int(input("Por favor indica un ID"))
+
+            delete_user(id)
 
         elif choice == 6:
 
